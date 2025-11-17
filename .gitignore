@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Environment variables
+.env
+.env.local
+
+# Vector database (NO subir - muy pesado)
+chroma_db/
+*.db
+*.sqlite
+
+# Modelos (se descargan local)
+models/
+*.bin
+*.pt
+*.onnx
+
+# Obsidian vault (PRIVADO - nunca subir)
+data/vault/
+obsidian-vault/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+.DS_Store?
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Docker
+.docker/
+
+# Backups
+*.bak
+*~
