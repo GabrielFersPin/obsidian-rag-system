@@ -1,6 +1,7 @@
 # Core dependencies
 anthropic>=0.34.0
 python-dotenv>=1.0.0
+mcp>=0.9.0
 
 # Embeddings
 sentence-transformers>=2.2.0

@@ -80,7 +80,7 @@ class ObsidianVectorStore:
                 setattr(default_settings, key, value)
         
         try:
-            self.client = chromadb.Client(default_settings)
+            self.client = chromadb.PersistentClient(path=str(self.persist_directory))
             logger.info("✅ Cliente ChromaDB creado")
             
             # Cargar collections existentes
