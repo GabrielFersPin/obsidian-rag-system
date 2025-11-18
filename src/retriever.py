@@ -22,8 +22,12 @@ try:
     from .embeddings import EmbeddingGenerator
     from .vectorstore import ObsidianVectorStore, format_search_results
 except ImportError:
-    from embeddings import EmbeddingGenerator
-    from vectorstore import ObsidianVectorStore, format_search_results
+    try:
+        from src.embeddings import EmbeddingGenerator
+        from src.vectorstore import ObsidianVectorStore, format_search_results
+    except ImportError:
+        from embeddings import EmbeddingGenerator
+        from vectorstore import ObsidianVectorStore, format_search_results
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO)

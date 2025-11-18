@@ -18,10 +18,10 @@ import sys
 from pathlib import Path
 from dotenv import load_dotenv
 
-# Añadir src al path
-sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
+# Añadir el directorio padre al path para que src sea un paquete
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from rag_chain import ObsidianRAG
+from src.rag_chain import ObsidianRAG
 
 
 def print_header(text: str) -> None:

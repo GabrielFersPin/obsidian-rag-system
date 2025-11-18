@@ -33,12 +33,12 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
-# Añadir src al path
-sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
+# Añadir el directorio padre al path para que src sea un paquete
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from obsidian_loader import ObsidianLoader
-from embeddings import EmbeddingGenerator
-from vectorstore import ObsidianVectorStore
+from src.obsidian_loader import ObsidianLoader
+from src.embeddings import EmbeddingGenerator
+from src.vectorstore import ObsidianVectorStore
 
 
 def parse_args():

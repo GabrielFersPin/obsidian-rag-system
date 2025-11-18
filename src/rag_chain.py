@@ -29,12 +29,20 @@ try:
     from .retriever import ObsidianRetriever, RetrievalResult
     from .claude_client import ClaudeClient, ClaudeResponse
 except ImportError:
-    # Imports absolutos cuando se ejecuta como script
-    from obsidian_loader import ObsidianLoader
-    from embeddings import EmbeddingGenerator
-    from vectorstore import ObsidianVectorStore
-    from retriever import ObsidianRetriever, RetrievalResult
-    from claude_client import ClaudeClient, ClaudeResponse
+    # Imports desde src cuando se ejecuta como script
+    try:
+        from src.obsidian_loader import ObsidianLoader
+        from src.embeddings import EmbeddingGenerator
+        from src.vectorstore import ObsidianVectorStore
+        from src.retriever import ObsidianRetriever, RetrievalResult
+        from src.claude_client import ClaudeClient, ClaudeResponse
+    except ImportError:
+        # Último intento: imports absolutos (cuando src/ está en sys.path directamente)
+        from obsidian_loader import ObsidianLoader
+        from embeddings import EmbeddingGenerator
+        from vectorstore import ObsidianVectorStore
+        from retriever import ObsidianRetriever, RetrievalResult
+        from claude_client import ClaudeClient, ClaudeResponse
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO)
