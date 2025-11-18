@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "obsidian-rag": {
+      "command": "/home/gabriel/Documents/obsidian-rag-system/venv/bin/python",
+      "args": [
+        "/home/gabriel/Documents/obsidian-rag-system/mcp_server.py"
+      ],
+      "env": {
+        "OBSIDIAN_VAULT_PATH": "/home/gabriel/Documents/obsidian-rag-system/data/vault"
+      }
+    }
+  }
+}
