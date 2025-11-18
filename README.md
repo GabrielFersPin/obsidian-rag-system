@@ -139,13 +139,18 @@ cp .env.example .env
 ### 3. Usar el Sistema
 
 ```bash
-# Modo interactivo (recomendado para empezar)
-python scripts/quick_start.py /path/to/obsidian/vault
+# Modo interactivo con vault de ejemplo incluido
+python scripts/quick_start.py example_vault
+
+# O con tu vault real de Obsidian
+python scripts/quick_start.py /path/to/tu/obsidian/vault
 
 # O indexar primero y luego usar
-python scripts/index_vault.py /path/to/vault
+python scripts/index_vault.py example_vault
 python scripts/example_rag_usage.py
 ```
+
+> **Nota**: Incluimos un `example_vault/` con 5 notas de ejemplo (QuickSort, MergeSort, Docker, RAG, ChromaDB) para que puedas probar el sistema inmediatamente.
 
 Ver [INSTALL.md](INSTALL.md) para instrucciones detalladas de instalación.
 
