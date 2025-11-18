@@ -109,18 +109,45 @@ Como estudiante de Data Science, tomo muchas notas usando el método Zettelkaste
 
 ---
 
-## 🚀 Quick Start (Cuando esté listo)
+## 🚀 Quick Start
+
+### 1. Clonar e Instalar
+
 ```bash
-# 1. Clonar repositorio
-git clone https://github.com/tu-usuario/obsidian-rag-system.git
+# Clonar repositorio
+git clone https://github.com/GabrielFersPin/obsidian-rag-system.git
 cd obsidian-rag-system
 
-# 2. Setup con Docker
-docker-compose up -d
+# Instalar dependencias
+pip install -r requirements.txt
 
-# 3. Acceder
-open http://localhost:8001/docs
+# Verificar instalación
+python scripts/check_dependencies.py
 ```
+
+### 2. Configurar API Key
+
+```bash
+# Obtén tu API key en: https://console.anthropic.com/
+export ANTHROPIC_API_KEY=sk-ant-api03-...
+
+# O crea un archivo .env
+cp .env.example .env
+# Edita .env y añade tu API key
+```
+
+### 3. Usar el Sistema
+
+```bash
+# Modo interactivo (recomendado para empezar)
+python scripts/quick_start.py /path/to/obsidian/vault
+
+# O indexar primero y luego usar
+python scripts/index_vault.py /path/to/vault
+python scripts/example_rag_usage.py
+```
+
+Ver [INSTALL.md](INSTALL.md) para instrucciones detalladas de instalación.
 
 ---
 
