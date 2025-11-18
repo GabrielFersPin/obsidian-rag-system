@@ -18,8 +18,12 @@ from typing import List, Dict, Optional, Any
 from dataclasses import dataclass
 import logging
 
-from .embeddings import EmbeddingGenerator
-from .vectorstore import ObsidianVectorStore, format_search_results
+try:
+    from .embeddings import EmbeddingGenerator
+    from .vectorstore import ObsidianVectorStore, format_search_results
+except ImportError:
+    from embeddings import EmbeddingGenerator
+    from vectorstore import ObsidianVectorStore, format_search_results
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO)

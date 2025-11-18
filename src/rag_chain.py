@@ -22,11 +22,19 @@ import logging
 from datetime import datetime
 import json
 
-from .obsidian_loader import ObsidianLoader
-from .embeddings import EmbeddingGenerator
-from .vectorstore import ObsidianVectorStore
-from .retriever import ObsidianRetriever, RetrievalResult
-from .claude_client import ClaudeClient, ClaudeResponse
+try:
+    from .obsidian_loader import ObsidianLoader
+    from .embeddings import EmbeddingGenerator
+    from .vectorstore import ObsidianVectorStore
+    from .retriever import ObsidianRetriever, RetrievalResult
+    from .claude_client import ClaudeClient, ClaudeResponse
+except ImportError:
+    # Imports absolutos cuando se ejecuta como script
+    from obsidian_loader import ObsidianLoader
+    from embeddings import EmbeddingGenerator
+    from vectorstore import ObsidianVectorStore
+    from retriever import ObsidianRetriever, RetrievalResult
+    from claude_client import ClaudeClient, ClaudeResponse
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO)
