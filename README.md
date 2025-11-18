@@ -59,9 +59,9 @@ Como estudiante de Data Science, tomo muchas notas usando el método Zettelkaste
 ## ✨ Features (Roadmap)
 
 - [x] Documentación de fundamentos RAG
-- [ ] Parser de notas Markdown de Obsidian
-- [ ] Sistema de embeddings con Sentence Transformers
-- [ ] Vector database con ChromaDB
+- [x] Parser de notas Markdown de Obsidian
+- [x] Sistema de embeddings con Sentence Transformers
+- [x] Vector database con ChromaDB
 - [ ] Integración con Claude API
 - [ ] Extracción automática de flashcards
 - [ ] Análisis de conexiones entre notas
